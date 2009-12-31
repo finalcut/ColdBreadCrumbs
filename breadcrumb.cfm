@@ -1,5 +1,5 @@
 <cfsilent>
-	<!--- dsp.breadcrumb.cfm - Copyright (c) 2005 SBCS, Inc. 
+	<!--- breadcrumb.cfm - Copyright (c) 2005 SBCS, Inc. 
 	
 		as you can see this was written a long time ago - you're welcome to update to a more functional approach if you want.
 	--->
@@ -246,6 +246,8 @@
 	<!--- list of pages we don't want to show up in the breadcrumb trail --->
 	<cfset ignorePages = "login,Undefined Page Caption">
 
+	<cfset ignorePageArgs = "fieldnames,username,submitform,password,block,init,self,myself,style,homeurl,eventvalue,pagekey,responsetype,allowpageedit,ecrsummarystatus,facilitytypename,clientid,clientcode" />
+
 	<cfset breadCrumb = ArrayNew(1)>
 	<!--- this is the title of your sites root page.  we need to know this, you can define multiple "roots" for yoursite if you want... --->
 	<cfset homePageStruct = structNew() />
@@ -295,7 +297,7 @@
 
 		<!--- i pass "password" in as an ignoreAttr to be on the safe side for security concerns --->
 		<!--- i pass "block" in as an ignoreAttr so we don't end up locking someone out of the site accidently --->
-		<cfset urlInfo = buildURlInfo(ts, pageCaption, "page", "fieldnames,username,submitform,password,block,init,self,myself,style,homeurl,eventvalue,pagekey,responsetype,allowpageedit,ecrsummarystatus,facilitytypename,clientid,clientcode" />
+		<cfset urlInfo = buildURlInfo(ts, pageCaption, "page", ignorePageArgs />
 		
 	</cfif>
 
