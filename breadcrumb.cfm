@@ -11,7 +11,8 @@
 			NOTE: All URL and FORM variables should be moved into the Attribute scope before calling this file.
 			there are plenty of existing examples of code available to accomplish this. By convention we typically
 			call said method in our application.cfm file.
-
+			
+			this really should be rewritten as a CFC - I thought I had at one point, if I find that I'll upload it.
 			
 		Parameters:
 			NONE; just must be included in the context of your site where the URL and FORM scope are still
