@@ -68,4 +68,4 @@ I am sorry this code is in such a shabby state.  It could seriously benefit from
 
 Caveats
 ----------
-This readme probably isn't complete - please read the "descriptive" text in breadcrumb.cfm for further information and pay attention to any comments you find there while you're at it.
+This readme probably isn't complete - please read the "descriptive" text in breadcrumb.cfm for further information and pay attention to any comments you find there while you're at it.  I'm pretty sure I've ported this to a CFC; I just have to find it.
